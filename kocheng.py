@@ -150,8 +150,7 @@ def menu():
     print '\x1b[1;37;40m5. Mass Delete Post'
     print '\x1b[1;37;40m6. Accept All Friend requests'
     print '\x1b[1;37;40m7. Remove All Friend'
-    print '\x1b[1;37;40m8. Profile Guard'
-    print '\x1b[1;37;40m9. LogOut'
+    print '\x1b[1;37;40m8. LogOut'
     print '\x1b[1;31;40m0. Out'
     print
     pilih()
@@ -185,9 +184,6 @@ def pilih():
                                     unfriend()
                                 else:
                                     if zedd == '8':
-                                    guard()
-                                else:
-                                    if zedd == '9':
                                         os.system('rm -rf login.txt')
                                         out
                                     else
