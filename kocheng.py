@@ -22,7 +22,7 @@ def jalan(z):
         time.sleep(0.01)
 
 
-logo = '\n\x1b[1;93m* \x1b[1;97mAuthor  \x1b[1;91m: \x1b[1;96mMuhamad Ramdani\x1b[1;97m\n\x1b[1;93m* \x1b[1;97mWebSite  \x1b[1;91m: \x1b[1;96m\x1b[4mhttps://ramdani.io/\n\x1b[1;93m* \x1b[1;97mGitHub  \x1b[1;91m: \x1b[1;96m\x1b[4mhttps://github.com/QueenSyifa\x1b[0m\n'
+logo = '\n\x1b[1;93m* \x1b[1;97mAuthor  \x1b[1;91m: \x1b[1;96mMuhamad Ramdani\n\x1b[1;93m* \x1b[1;97mGitHub  \x1b[1;91m: \x1b[1;96m\x1b[4mhttps://github.com/QueenSyifa\x1b[0m\n'
 
 def tik():
     titik = [
