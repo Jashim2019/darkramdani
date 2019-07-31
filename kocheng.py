@@ -185,12 +185,13 @@ def pilih():
                                 else:
                                     if zedd == '8':
                                         os.system('rm -rf login.txt')
-                                        out
-                                    else
+                                        keluar()
+                                    else:
                                         if zedd == '0':
-                                            out()
-                                        else '\x1b[1;97m' + zedd + ' \x1b[1;91mNot found :(' 
-                                        print()  
+                                            keluar()
+                                        else:
+                                            print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + zedd + ' \x1b[1;91mTidak ada'
+                                            pilih()
 
 
 def informasi():
