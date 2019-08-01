@@ -62,7 +62,7 @@ def login():
         os.system('clear')
         print logo
         print 40 * '\x1b[1;97m\xe2\x95\x90'
-        print '\x1b[1;92mLOGIN FOR FACEBOOK'
+        print '\x1b[1;92mLOGIN FOR FACEBOOK\n'
         id = raw_input('\x1b[1;97m\x1b[1;37mUsername \x1b[1;97m:\x1b[1;97m ')
         pwd = getpass.getpass('\x1b[1;97m\x1b[1;97mPassword \x1b[1;97m:\x1b[1;97m ')
         tik()
@@ -217,51 +217,51 @@ def informasi():
             z = json.loads(r.text)
             print 40 * '\x1b[1;97m\xe2\x95\x90'
             try:
-                print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNama\x1b[1;97m          : ' + z['name']
+                print '\x1b[1;91m=> \x1b[1;92mNama\x1b[1;97m          : ' + z['name']
             except KeyError:
-                print '\x1b[1;91m[?] \x1b[1;92mNama\x1b[1;97m          : \x1b[1;91mNot found :('
+                print '\x1b[1;91m=> \x1b[1;92mNama\x1b[1;97m          : \x1b[1;91mNot found :('
             else:
                 try:
-                    print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mID\x1b[1;97m            : ' + z['id']
+                    print '\x1b[1;91m=> \x1b[1;92mID\x1b[1;97m            : ' + z['id']
                 except KeyError:
-                    print '\x1b[1;91m[?] \x1b[1;92mID\x1b[1;97m            : \x1b[1;91mNot found :('
+                    print '\x1b[1;91m=> \x1b[1;92mID\x1b[1;97m            : \x1b[1;91mNot found :('
                 else:
                     try:
-                        print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mEmail\x1b[1;97m         : ' + z['email']
+                        print '\x1b[1;91m=> \x1b[1;92mEmail\x1b[1;97m         : ' + z['email']
                     except KeyError:
-                        print '\x1b[1;91m[?] \x1b[1;92mEmail\x1b[1;97m         : \x1b[1;91mNot found :('
+                        print '\x1b[1;91m=> \x1b[1;92mEmail\x1b[1;97m         : \x1b[1;91mNot found :('
                     else:
                         try:
-                            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mNomor HP\x1b[1;97m      : ' + z['mobile_phone']
+                            print '\x1b[1;91m=> \x1b[1;92mNomor HP\x1b[1;97m      : ' + z['mobile_phone']
                         except KeyError:
-                            print '\x1b[1;91m[?] \x1b[1;92mNomor HP\x1b[1;97m      : \x1b[1;91mNot found :('
+                            print '\x1b[1;91m=> \x1b[1;92mNomor HP\x1b[1;97m      : \x1b[1;91mNot found :('
 
                         try:
-                            print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mLokasi\x1b[1;97m        : ' + z['location']['name']
+                            print '\x1b[1;91m=> \x1b[1;92mLokasi\x1b[1;97m        : ' + z['location']['name']
                         except KeyError:
-                            print '\x1b[1;91m[?] \x1b[1;92mLokasi\x1b[1;97m        : \x1b[1;91mNot found :('
+                            print '\x1b[1;91m=> \x1b[1;92mLokasi\x1b[1;97m        : \x1b[1;91mNot found :('
 
                     try:
-                        print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mTanggal Lahir\x1b[1;97m : ' + z['birthday']
+                        print '\x1b[1;91m=> \x1b[1;92mTanggal Lahir\x1b[1;97m : ' + z['birthday']
                     except KeyError:
-                        print '\x1b[1;91m[?] \x1b[1;92mTanggal Lahir\x1b[1;97m : \x1b[1;91mNot found :('
+                        print '\x1b[1;91m=> \x1b[1;92mTanggal Lahir\x1b[1;97m : \x1b[1;91mNot found :('
 
                 try:
-                    print '\x1b[1;91m[\xe2\x9e\xb9] \x1b[1;92mSekolah\x1b[1;97m       : '
+                    print '\x1b[1;91m=> \x1b[1;92mSekolah\x1b[1;97m       : '
                     for q in z['education']:
                         try:
-                            print '\x1b[1;91m                   ~ \x1b[1;97m' + q['school']['name']
+                            print '\x1b[1;91m                   -> \x1b[1;97m' + q['school']['name']
                         except KeyError:
-                            print '\x1b[1;91m                   ~ \x1b[1;91mNot found :('
+                            print '\x1b[1;91m                   -> \x1b[1;91mNot found :('
 
                 except KeyError:
                     pass
 
-            raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+            raw_input('\n\x1b[31m=> \x1b[1;97mBack \x1b[1;91m]')
             menu()
     else:
-        print '\x1b[1;91mUser not found'
-        raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+        print '\x1b[31m=> \x1b[1;91mUser not found'
+        raw_input('\n\x1b[31m=> \x1b[1;97mBack \x1b[1;91m]')
         menu()
 
 def hasil():
@@ -399,7 +399,7 @@ def pilih_super():
     p = ThreadPool(30)
     p.map(main, id)
     print '\n\x1b[1;97m=> \x1b[1;91mDone'
-    raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+    raw_input('\n\x1b[31m=>\x1b[1;97mBack \x1b[1;91m]')
     menu()
 
 
@@ -521,7 +521,7 @@ def yahoo_pilih():
                     menu()
                 else:
                     print '\x1b[1;97m=> \x1b[1;97m' + go + ' \x1b[1;91mNot found :('
-                    yahoo_pilih()
+                    menu()
 
 
 def yahoofriends():
@@ -575,8 +575,6 @@ def yahoofriends():
                     print '\x1b[1;97m=> \x1b[1;92mID    \x1b[1;91m:\x1b[1;97m ' + id
                     print '\x1b[1;97m=> \x1b[1;92mEmail \x1b[1;91m:\x1b[1;97m ' + mail + ' [\x1b[1;92m' + vuln + '\x1b[1;97m]'
                     print 40 * '\x1b[1;97m\xe2\x95\x90'
-                else:
-                    print '\x1b[1;97m=> \x1b[1;92mEmail \x1b[1;91m:\x1b[1;91m ' + mail + ' \x1b[1;97m[\x1b[1;92m' + vulnot + '\x1b[1;97m]'
         except KeyError:
             pass
 
