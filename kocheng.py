@@ -21,7 +21,7 @@ def jalan(z):
         sys.stdout.flush()
         time.sleep(0.01)
 
-logo = '\n\x1b[1;93m* \x1b[1;97mAuthor  \x1b[1;91m: \x1b[1;96mMuhamad Ramdani\n\x1b[1;93m* \x1b[1;97mWhatApp \x1b[1;91m: \x1b[1;96m+6282114018869\n'
+logo = '\n\x1b[1;93m* \x1b[1;97mAuthor  \x1b[1;91m: \x1b[1;96m@Ramdani.apy\n\x1b[1;93m* \x1b[1;97mWhatsApp\x1b[1;91m: \x1b[1;96m+6282114018869\n'
 def tik():
     titik = [
      '.   ', '..  ', '... ']
@@ -63,8 +63,8 @@ def login():
         print logo
         print 40 * '\x1b[1;97m\xe2\x95\x90'
         print '\x1b[1;92mLOGIN FOR FACEBOOK\n'
-        id = raw_input('\x1b[1;97m=> \x1b[1;97m\x1b[1;37mUsername \x1b[1;97m:\x1b[1;97m ')
-        pwd = getpass.getpass('\x1b[1;97m=> \x1b[1;97m\x1b[1;97mPassword \x1b[1;97m:\x1b[1;97m n/')
+        id = raw_input('\x1b[1;97m\x1b[1;37mUsername \x1b[1;97m:\x1b[1;97m ')
+        pwd = getpass.getpass('\x1b[1;97m\x1b[1;97mPassword \x1b[1;97m:\x1b[1;97m ')
         tik()
         try:
             br.open('https://m.facebook.com')
@@ -101,7 +101,7 @@ def login():
                 out()
 
         if 'checkpoint' in url:
-            print '\x1b[1;97m=> \n\x1b[1;93mAccount Checkpoint [re-Login]'
+            print '\n\x1b[1;93mAccount Checkpoint [re-Login]'
             os.system('rm -rf login.txt')
             time.sleep(1)
             out()
@@ -130,7 +130,7 @@ def menu():
             id = a['id']
         except KeyError:
             os.system('clear')
-            print '\x1b[1;97m=> \x1b[1;93mAccount Checkpoint [re-Login]'
+            print '\x1b[1;93mAccount Checkpoint [re-Login]'
             os.system('rm -rf login.txt')
             time.sleep(1)
             login()
