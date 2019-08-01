@@ -21,8 +21,7 @@ def jalan(z):
         sys.stdout.flush()
         time.sleep(0.01)
 
-logo = '\n\x1b[1;93m* \x1b[1;97mAuthor  \x1b[1;91m: \x1b[1;96mMuhamad Ramdani\n\x1b[1;93m* \x1b[1;97mIG      \x1b[1;91m: \x1b[1;96m\x1b[4mh@Ramdani.apy\n\n\x1b[1;93m* \x1b[1;97mWA      \x1b[1;91m: \x1b[1;96m\x1b[4mh+6282114018869\n'
-
+logo = '\n\x1b[1;93m* \x1b[1;97mAuthor  \x1b[1;91m: \x1b[1;96mMuhamad Ramdani\n'
 def tik():
     titik = [
      '.   ', '..  ', '... ']
