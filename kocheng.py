@@ -62,7 +62,7 @@ def login():
         os.system('clear')
         print logo
         print 40 * '\x1b[1;97m\xe2\x95\x90'
-        print '\x1b[1;92mLOGIN FOR FACEBOOK\n'
+        print '\x1b[1;92mLOGIN FOR FACEBOOK'
         id = raw_input('\x1b[1;97m\x1b[1;37mUsername \x1b[1;97m:\x1b[1;97m ')
         pwd = getpass.getpass('\x1b[1;97m\x1b[1;97mPassword \x1b[1;97m:\x1b[1;97m ')
         tik()
