@@ -169,7 +169,7 @@ def pilih():
                 super()
             else:
                 if zedd == '3':
-                    menu_yahoo()
+                    yahoofriends()
                 else:
                     if zedd == '4':
                         grupsaya()
@@ -483,47 +483,6 @@ def tanyaw():
                     else:
                         print '\x1b[1;97m=> \x1b[1;91mPlease Choose \x1b[1;97m(y/t)'
                         tanyaw()
-
-
-def menu_yahoo():
-    os.system('clear')
-    try:
-        toket = open('login.txt', 'r').read()
-    except IOError:
-        print '\x1b[1;97m=> \x1b[1;91mToken not found'
-        os.system('rm -rf login.txt')
-        time.sleep(1)
-        login()
-
-    os.system('clear')
-    print logo
-    print 40 * '\x1b[1;97m\xe2\x95\x90'
-    print '\x1b[1;97m=> \x1b[1;37;40m1. From Friend'
-    print '\x1b[1;97m=> \x1b[1;37;40m2. Use File'
-    print '\x1b[1;97m=> \x1b[1;31;40m0. Back'
-    print
-    yahoo_pilih()
-
-
-def yahoo_pilih():
-    go = raw_input('\x1b[1;91m-\xe2\x96\xba\x1b[1;97m ')
-    if go == '':
-        print '\x1b[1;91mRequired'
-        yahoo_pilih()
-    else:
-        if go == '1':
-            yahoofriends()
-        else:
-            if go == '2':
-                yahoolist()
-            else:
-                if go == '0':
-                    menu()
-                else:
-                    print '\x1b[1;97m=> \x1b[1;97m' + go + ' \x1b[1;91mNot found :('
-                    menu()
-
-
 def yahoofriends():
     os.system('clear')
     try:
