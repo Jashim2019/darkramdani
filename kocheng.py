@@ -564,7 +564,9 @@ def yahoofriends():
                 jok = re.compile('"messages.ERROR_INVALID_USERNAME">.*')
                 try:
                     pek = jok.search(klik).group()
-                
+                except:
+                    continue
+
                 if '"messages.ERROR_INVALID_USERNAME">' in pek:
                     save.write(mail + '\n')
                     print 40 * '\x1b[1;97m\xe2\x95\x90'
